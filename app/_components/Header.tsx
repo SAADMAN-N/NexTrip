@@ -29,9 +29,9 @@ function Header() {
 
       {/* Menu options */}
       <div className="flex items-center gap-8">
-        {menuOptions.map((menu, i) => (
-          <Link href={menu.path}>
-            <h2 className="text-lg hover:scale-105 hover:text-primary transition-all">
+        {menuOptions.map((menu, index) => (
+          <Link href={menu.path} key={index}>
+            <h2 className="text-lg hover:scale-1  05 hover:text-primary transition-all">
               {menu.name}
             </h2>
           </Link>
@@ -39,7 +39,7 @@ function Header() {
       </div>
 
       {/* CTA */}
-      <Button>Get Started</Button>
+      <Button className="text-black">Get Started</Button>
     </div>
   );
 }
