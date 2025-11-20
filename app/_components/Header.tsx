@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { SignIn, SignInButton } from "@clerk/nextjs";
 
 const menuOptions = [
   {
@@ -31,7 +32,7 @@ function Header() {
       <div className="flex items-center gap-8">
         {menuOptions.map((menu, index) => (
           <Link href={menu.path} key={index}>
-            <h2 className="text-lg hover:scale-1  05 hover:text-primary transition-all">
+            <h2 className="text-lg hover:scale-105 hover:text-primary transition-all">
               {menu.name}
             </h2>
           </Link>
@@ -39,7 +40,9 @@ function Header() {
       </div>
 
       {/* CTA */}
-      <Button className="text-black">Get Started</Button>
+      <SignInButton mode="modal">
+        <Button className="text-black">Get Started</Button>
+      </SignInButton>
     </div>
   );
 }
