@@ -56,7 +56,7 @@ const data = [
 
     title: "Explore the City of Lights – Eiffel Tower, Louvre & more",
 
-    src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2600&auto=format&fit=crop",
+    src: "/paris.png",
 
     content: <DummyContent />,
   },
@@ -66,7 +66,7 @@ const data = [
 
     title: "Experience NYC – Times Square, Central Park, Broadway",
 
-    src: "https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/newyork.png",
 
     content: <DummyContent />,
   },
@@ -76,7 +76,7 @@ const data = [
 
     title: "Discover Tokyo – Shibuya, Cherry Blossoms, Temples",
 
-    src: "https://images.unsplash.com/photo-1522547902298-51566e4fb383?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/japan.png",
 
     content: <DummyContent />,
   },
@@ -86,7 +86,7 @@ const data = [
 
     title: "Walk through History – Colosseum, Vatican, Roman Forum",
 
-    src: "https://plus.unsplash.com/premium_photo-1675975678457-d70708bf77c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/rome.png",
 
     content: <DummyContent />,
   },
@@ -96,7 +96,7 @@ const data = [
 
     title: "Luxury and Innovation – Burj Khalifa, Desert Safari",
 
-    src: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/dubai.png",
 
     content: <DummyContent />,
   },
@@ -106,7 +106,7 @@ const data = [
 
     title: "Harbour Views – Opera House, Bondi Beach & Wildlife",
 
-    src: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/india.png",
 
     content: <DummyContent />,
   },
