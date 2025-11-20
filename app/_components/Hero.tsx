@@ -35,6 +35,7 @@ function Hero() {
       return;
     }
     // else nav to trip planner page
+    router.push("/create-new-trip");
   };
 
   return (

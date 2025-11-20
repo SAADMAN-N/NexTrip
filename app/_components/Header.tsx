@@ -48,7 +48,7 @@ function Header() {
           <Button className="text-black">Get Started</Button>
         </SignInButton>
       ) : (
-        <Link href={"/create-trip"}>
+        <Link href={"/create-new-trip"}>
           <Button className="text-black">Create New Trip</Button>
         </Link>
       )}
