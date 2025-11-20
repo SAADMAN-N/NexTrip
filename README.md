@@ -4,9 +4,51 @@ An intelligent, AI-powered travel planning application designed to help users cr
 
 🌍 **NexTrip** - A Full Stack AI Trip Planner built with Next.js, React, TypeScript, Arcjet, Convex, Clerk, Mapbox, and Google Places API.
 
-## What is NexTrip?
+## Getting Started
 
-NexTrip is a web application that serves as your personal travel assistant. It uses artificial intelligence to understand your travel preferences, destination interests, budget constraints, and time availability to generate comprehensive, personalized trip itineraries. Whether you're planning a weekend getaway or an extended vacation, NexTrip helps you discover destinations, plan activities, and organize your travel schedule all in one place.
+These instructions will give you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on deploying the project on a live system.
+
+### Prerequisites
+
+Requirements for the software and other tools to build, test and push:
+
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) - Package manager
+- [Next.js 16](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Convex](https://www.convex.dev/) - Backend and database service
+- [Clerk](https://clerk.com/) - Authentication service
+- [Mapbox](https://www.mapbox.com/) - Mapping service
+- [Google Places API](https://developers.google.com/maps/documentation/places) - Location data service
+- [Arcjet](https://arcjet.com/) - Performance and security optimization
+
+### Installing
+
+A step by step series of examples that tell you how to get a development environment running.
+
+Clone the repository:
+
+    git clone https://github.com/SAADMAN-N/NexTrip.git
+
+Navigate to the project directory:
+
+    cd nexTrip
+
+Install dependencies:
+
+    npm install
+
+Set up environment variables:
+
+    cp .env.example .env.local
+
+Configure your API keys and service credentials in `.env.local`.
+
+Run the development server:
+
+    npm run dev
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Features
 
@@ -69,3 +111,37 @@ NexTrip is designed for:
 - **Travel Agencies**: Businesses that want to offer AI-powered trip planning services to their clients
 
 The application simplifies the complex process of trip planning by automating research, itinerary creation, and activity scheduling, allowing users to focus on the excitement of their upcoming journey rather than the logistics of planning it.
+
+## Deployment
+
+Add additional notes to deploy this on a live system.
+
+Build the production version:
+
+    npm run build
+
+Start the production server:
+
+    npm start
+
+For deployment on platforms like Vercel, Netlify, or other hosting services, follow their respective deployment guides and ensure all environment variables are properly configured.
+
+## Built With
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [React](https://react.dev/) - JavaScript library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Convex](https://www.convex.dev/) - Backend and database
+- [Clerk](https://clerk.com/) - Authentication and user management
+- [Arcjet](https://arcjet.com/) - Performance and security optimization
+- [Mapbox](https://www.mapbox.com/) - Mapping and location services
+- [Google Places API](https://developers.google.com/maps/documentation/places) - Location data and place information
+- [shadcn/ui](https://ui.shadcn.com/) - UI component library
+- [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible UI components
+
+## Acknowledgments
+
+- Hat tip to the tutorial creators and community for inspiration
+- Thanks to all the open-source libraries and tools that made this project possible
+- Inspiration from modern travel planning applications
