@@ -28,7 +28,7 @@ function Header() {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image src="/logo.svg" alt="Logo" width={30} height={30} />
-        <h2 className="text-2xl font-bold">AI Trip Planner</h2>
+        <h2 className="text-2xl font-bold">NexTrip</h2>
       </div>
 
       {/* Menu options */}
