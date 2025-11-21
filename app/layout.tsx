@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import Provider from "./provider";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 };
 
 const inter = Inter({ subsets: ["latin"] });
+const instrumentSerif = Instrument_Serif({ 
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif"
+});
 
 export default function RootLayout({
   children,
@@ -19,11 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+        <body className={`${inter.className} ${instrumentSerif.variable}`}>
           <ConvexClientProvider>{children}</ConvexClientProvider>
-        </body>
-      </html>
+      </body>
+    </html>
     </ClerkProvider>
   );
 }

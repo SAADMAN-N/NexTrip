@@ -4,7 +4,10 @@ import React from "react";
 function EmptyBoxState({ onSelectOption }: any) {
   return (
     <div className="mt7">
-      <h2 className="font-bold text-xl text-center">
+      <h2
+        className="font-bold text-5xl text-center"
+        style={{ fontFamily: "var(--font-instrument-serif)" }}
+      >
         Start Planning Your Next <strong className="text-primary">Trip </strong>
         using AI
       </h2>
