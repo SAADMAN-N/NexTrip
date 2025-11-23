@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Globe2, Clock } from "lucide-react";
 import React from "react";
 
-function FinalUi({ viewTrip }: any) {
+function FinalUi({ viewTrip, tripDetail }: any) {
   return (
     <div className="flex flex-col items-center justify-center mt-6 p-6 bg-white dark:bg-gray-800 rounded-2xl">
       <Globe2 className="text-primary text-4xl animate-bounce" />
@@ -14,9 +14,9 @@ function FinalUi({ viewTrip }: any) {
         Gathering best destinations, activities, and travel details for you.
       </p>
       <Button
-        disabled
+        disabled={!tripDetail}
         onClick={viewTrip}
-        className="bg-primary text-black hover:bg-primary/90 mt-2 w-full disabled:opacity-50"
+        className="bg-primary text-black hover:bg-primary/90 mt-2 w-full disabled:opacity-50 cursor-pointer"
       >
         View Trip
       </Button>

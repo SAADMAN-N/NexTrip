@@ -16,11 +16,22 @@ type Message = {
   ui?: string;
 };
 
+export type TripInfo = {
+  destination: string;
+  duration: string;
+  origin: string;
+  budget: string;
+  group_size: string;
+  hotels: any;
+  itenerary: any;
+};
+
 function ChatBox() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [isFinal, setIsFinal] = useState(false);
+  const [tripDetail, setTripDetail] = useState();
 
   const onSend = async () => {
     if (!userInput.trim()) return;
@@ -49,6 +60,11 @@ function ChatBox() {
       ]);
     console.log("AI Response:", result.data);
     console.log("UI value:", result?.data?.ui);
+
+    if (isFinal) {
+      setTripDetail(result?.data?.trip_plan);
+    }
+
     setLoading(false);
   };
 
@@ -84,6 +100,7 @@ function ChatBox() {
     } else if (uiLower == "final") {
       return (
         <FinalUi
+          tripDetail={tripDetail}
           viewTrip={() => {
             // Handle view trip action
             console.log("View trip clicked");
@@ -99,9 +116,14 @@ function ChatBox() {
     if (lastMsg?.ui == "Final") {
       setIsFinal(true);
       setUserInput("Ok, Great!");
-      onSend();
     }
   }, [messages]);
+
+  useEffect(() => {
+    if (isFinal && userInput) {
+      onSend();
+    }
+  }, [isFinal]);
 
   return (
     <div className="h-[85vh] flex flex-col">
@@ -141,7 +163,7 @@ function ChatBox() {
         {loading && (
           <div className="flex justify-start mt-2">
             <div className="max-w-lg bg-gray-300 text-white px-4 py-2 rounded-lg">
-              <Loader className="animate-spin" />
+              <Loader className="animate-spin text-black" />
             </div>
           </div>
         )}
