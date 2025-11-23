@@ -9,6 +9,10 @@ import GroupSizeUi from "./GroupSizeUi";
 import BudgetUi from "./BudgetUi";
 import DayCountUi from "./DayCountUi";
 import FinalUi from "./FinalUi";
+import { useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import { useUserDetail } from "@/app/provider";
+import { uuid } from "uuidv4";
 
 type Message = {
   role: string;
@@ -32,6 +36,8 @@ function ChatBox() {
   const [loading, setLoading] = useState(false);
   const [isFinal, setIsFinal] = useState(false);
   const [tripDetail, setTripDetail] = useState();
+  const SaveTripDetail = useMutation(api.tripDetail.CreateTripDetail);
+  const { userDetail, setUserDetail } = useUserDetail();
 
   const onSend = async () => {
     if (!userInput.trim()) return;
@@ -63,6 +69,12 @@ function ChatBox() {
 
     if (isFinal) {
       setTripDetail(result?.data?.trip_plan);
+      const tripId = uuid();
+      await SaveTripDetail({
+        tripDetail: result?.data?.trip_plan,
+        tripId: tripId,
+        uid: userDetail?._id,
+      });
     }
 
     setLoading(false);
