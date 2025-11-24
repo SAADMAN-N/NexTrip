@@ -25,7 +25,7 @@ function PlaceCardItem({ activity }: Props) {
           {activity.place_details}
         </p>
         <h2 className="flex gap-1 text-blue-500 text-sm">
-          <Ticket />
+          <Ticket size={20} />
           {activity?.ticket_pricing}
         </h2>
 

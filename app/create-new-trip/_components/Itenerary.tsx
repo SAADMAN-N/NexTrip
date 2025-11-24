@@ -181,7 +181,7 @@ function Itenerary() {
           <p>Best Time: {dayData?.best_time_to_visit_day}</p>
           <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
             {dayData?.activities.map((activity, index) => (
-              <PlaceCardItem activity={activity} />
+              <PlaceCardItem activity={activity} key={index} />
             ))}
           </div>
         </div>
